@@ -9,17 +9,18 @@
  */
 int main(void)
 {
-  int dig;
+int dig;
 
-  dig = 48;
+dig = 48;
 
 while (dig < 58)
 {
 putchar(dig);
-if(dig != 57){
+if (dig != 57)
+{
 putchar(',');
 putchar(' ');
-}     
+}
 dig++;
 }
 putchar('\n');
