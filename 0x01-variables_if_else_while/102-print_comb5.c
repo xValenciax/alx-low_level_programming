@@ -14,8 +14,13 @@ int scndDig;
 int thrdDig;
 int frthDig;
 
-firstDig = 48, scndDig = 48, thrdDig = 48, frthDig = 49;
+firstDig = 48;
+scndDig = 48;
+thrdDig = 48;
+frthDig = 49;
 while (firstDig != 57 || scndDig != 57)
+{
+if (frthDig != 58)
 {
 putchar(firstDig);
 putchar(scndDig);
@@ -26,6 +31,7 @@ if (firstDig != 57 || scndDig != 56)
 {
 putchar(',');
 putchar(' ');
+}
 }
 frthDig++;
 if (frthDig > 57)
@@ -44,9 +50,6 @@ frthDig = scndDig + 1;
 else
 {
 scndDig++;
-if (scndDig == 57)
-frthDig = 48;
-else
 frthDig = scndDig + 1;
 }
 }
