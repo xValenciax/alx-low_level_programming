@@ -1,4 +1,3 @@
-#include "main.h"
 /**
  * print_alphabet - prints entire alphabet in lower case
  *
