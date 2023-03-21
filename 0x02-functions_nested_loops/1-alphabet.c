@@ -1,3 +1,4 @@
+#include "_putchar.c"
 /**
  * print_alphabet - prints entire alphabet in lower case
  *

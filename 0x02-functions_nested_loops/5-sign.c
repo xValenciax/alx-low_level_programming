@@ -1,3 +1,4 @@
+#include "_putchar.c"
 /**
  * print_sign - checks the sign of entered number
  *
