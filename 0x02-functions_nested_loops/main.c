@@ -1,16 +1,6 @@
-#include <stdio.h>
+#include "11-print_to_98.c"
 int main(void)
 {
-  int hrs = 0, mins = 0;
-
-
-  while (hrs < 24){
-    while(mins < 60){
-      printf("%d:%d\n", hrs, mins);
-      mins++;
-    }
-    hrs++;
-    mins = 0;
-  }
+  print_to_98(98);
   return 0;
 }
