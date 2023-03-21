@@ -1,13 +1,23 @@
-#include "main.c"
+#include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet_x10 - prints alphabet 10 time
  *
- * Return: Always 0 (Success)
+ * Return: void
  */
 
-int main(void)
+void print_alphabet_x10()
 {
-print_alphabet_x10();
-return (0);
+  char strt = 'a';
+  int cnt = 0;
+
+  while (cnt < 9)
+    {
+      while (strt <= 'z')
+	{
+	  _putchar(strt);
+	  strt++;
+	}
+      cnt++;
+    }
 }

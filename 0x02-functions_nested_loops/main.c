@@ -1,5 +1,5 @@
 #include <unistd.h>
-#include "main.h"
+#include "2-print_alphabet_x10.c"
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
@@ -10,4 +10,10 @@
 int _putchar(char c)
 {
 	return (write(1, &c, 1));
+}
+
+int main(void)
+{
+  
+  return 0;
 }
