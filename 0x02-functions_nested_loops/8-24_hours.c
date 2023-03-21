@@ -39,6 +39,9 @@ _putchar('0' + scnd_dig);
 _putchar('0' + first_dig);
 }
 _putchar('\n');
+mins++;
 }
+hrs++;
+mins = 0;
 }
 }
