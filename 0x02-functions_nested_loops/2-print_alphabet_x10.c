@@ -6,18 +6,19 @@
  * Return: void
  */
 
-void print_alphabet_x10()
+void print_alphabet_x10(void)
 {
-  char strt = 'a';
-  int cnt = 0;
+char strt = 'a';
+int cnt = 0;
 
-  while (cnt < 9)
-    {
-      while (strt <= 'z')
-	{
-	  _putchar(strt);
-	  strt++;
-	}
-      cnt++;
-    }
+while (cnt < 10)
+{
+while (strt <= 'z')
+{
+_putchar(strt);
+strt++;
+}
+cnt++;
+_putchar('\n');
+}
 }
