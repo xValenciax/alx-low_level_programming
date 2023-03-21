@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * print_to_98 - prints all numbers in rang n - 98
  *
@@ -15,23 +15,19 @@ if (n < 98)
 int cnt = n;
 while (cnt <= 98)
 {
-_putchar(n + '0');
+printf("%d", cnt);
 if (cnt != 98)
-{
-_putchar(',');
-_putchar(' ');
-}
+printf(", ");
 cnt++;
 }
 return;
 }
 while (n >= 98)
 {
-_putchar(n + '0');
+printf("%d", n);
 if (n != 98)
 {
-_putchar(',');
-_putchar(' ');
+printf(", ");
 }
 n--;
 }
