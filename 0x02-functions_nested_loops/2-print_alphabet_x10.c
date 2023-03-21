@@ -13,6 +13,7 @@ int cnt = 0;
 
 while (cnt < 10)
 {
+strt = 'a';
 while (strt <= 'z')
 {
 _putchar(strt);
