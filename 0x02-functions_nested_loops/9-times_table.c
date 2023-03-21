@@ -21,8 +21,8 @@ _putchar(res + '0');
 if (num != 9)
 {
 _putchar(',');
-_putchar('.');
-_putchar('.');
+_putchar(' ');
+_putchar(' ');
 }
 }
 else
@@ -32,7 +32,7 @@ _putchar((res % 10) + '0');
 if (num != 9)
 {
 _putchar(',');
-_putchar('.');
+_putchar(' ');
 }
 }
 num++;
