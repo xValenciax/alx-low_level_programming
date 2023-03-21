@@ -15,16 +15,19 @@ while (multiplicant < 10)
 while (num < 10)
 {
 int res = num * multiplicant;
-if(res < 9)
+if(res < 10)
 _putchar(res + '0');
 else
 {
 _putchar((res / 10) + '0');
 _putchar((res % 10) + '0');
 }
+if(num != 9)
+{
 _putchar(',');
 _putchar(' ');
 _putchar(' ');
+}
 num++;
 }
 multiplicant++;
