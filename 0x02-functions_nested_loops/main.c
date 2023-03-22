@@ -1,6 +1,12 @@
-#include "11-print_to_98.c"
+#include "100-times_table.c"
 int main(void)
 {
-  print_to_98(98);
+  print_times_table(3);
+  printf("\n");
+  print_times_table(5);
+  printf("\n");
+  print_times_table(98);
+  printf("\n");  
+  print_times_table(12);
   return 0;
 }
