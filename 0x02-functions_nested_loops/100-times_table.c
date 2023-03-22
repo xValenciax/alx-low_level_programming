@@ -21,16 +21,13 @@ while (i <= n)
 j = 0;
 while (j <= n)
 {
-int res = (i * j);
+int res = i *j;
 if (j == 0)
 printf("%d,", res);
-if (j == n)
+else if (j == n)
 printf("%4d", res);
-
 else
-{
 printf("%4d,", res);
-}
 j++;
 }
 i++;
