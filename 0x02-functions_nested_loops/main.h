@@ -14,3 +14,4 @@ void print_times_table(int);
 int sum_three_five(void);
 void fib_50(void);
 void even_liber_acci(void);
+void fib_98(void);
