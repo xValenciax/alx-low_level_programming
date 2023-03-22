@@ -10,7 +10,7 @@
 int main(void)
 {
 fib_50();
-return 0;
+return (0);
 }
 
 /**
@@ -25,7 +25,7 @@ int cnt = 1;
 while (cnt <= 50)
 {
 unsigned long int tmp = n_1 + n_2;
-if(cnt == 48)
+if (cnt == 48)
 printf("%lu", tmp);
 else
 printf("%lu, ", tmp);
