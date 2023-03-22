@@ -13,7 +13,11 @@ int i, j;
 
 if (n > 15 || n < 0)
 return;
-
+if (n == 0)
+{
+printf("0\n");  
+return;
+}
 i = 0;
 j = 0;
 while (i <= n)
