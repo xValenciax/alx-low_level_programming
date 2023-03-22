@@ -15,7 +15,7 @@ if (n > 15 || n < 0)
 return;
 if (n == 0)
 {
-printf("0\n");  
+printf("0\n");
 return;
 }
 i = 0;
