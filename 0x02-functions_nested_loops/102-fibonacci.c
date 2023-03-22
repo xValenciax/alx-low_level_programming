@@ -20,7 +20,7 @@ return 0;
  */
 void fib_50(void)
 {
-unsigned long int n_1 = 0, n_2 = 1, curr = 0;
+unsigned long int n_1 = 0, n_2 = 1;
 int cnt = 2;
 printf("%lu, %lu, ", n_1, n_2);
 while (cnt <= 48)
