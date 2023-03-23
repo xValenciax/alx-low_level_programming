@@ -12,7 +12,7 @@
 void print_number(int n)
 {
 int no_digs = 0;
-unsigned tmp = 0, tmpval = n;
+unsigned int tmp = 0, tmpval = n;
 
 if (n == 0)
 _putchar('0');
@@ -22,7 +22,7 @@ if (n < 0)
 n *= -1;
 _putchar('-');
 }
- 
+
 tmp = n;
 tmpval = n;
 
