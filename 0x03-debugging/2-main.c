@@ -10,9 +10,9 @@ int main(void)
         int a, b, c;
         int largest;
 
-        a = 20;
-        b = 20;
-        c = 20;
+        a = 0;
+        b = 0;
+        c = -150;
 
         largest = largest_number(a, b, c);
 
