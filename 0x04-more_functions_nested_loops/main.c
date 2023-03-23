@@ -6,11 +6,7 @@
  */
 int main(void)
 {
-    char c;
-
-    c = '9';
-    printf("%c: %d\n", c, _isdigit(c));
-    c = '-';
-    printf("%c: %d\n", c, _isdigit(c));
+    printf("%d\n", mul(98, 1024));
+    printf("%d\n", mul(-402, 4096));
     return (0);
 }
