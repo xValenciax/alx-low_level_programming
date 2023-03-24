@@ -15,7 +15,7 @@ void print_diagonal(int n);
 void print_square(int size);
 void fizz_buzz(void);
 void print_triangle(int size);
-void largest_prime_factor(void);
+void largest_prime_factor(unsigned long int);
 int is_prime(int n);
 void print_number(int n);
 
