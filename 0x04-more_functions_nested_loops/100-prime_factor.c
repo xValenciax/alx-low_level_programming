@@ -17,26 +17,31 @@ return (0);
 
 
 /**
+ * largest_prime_factor - prints the largest prime factor of a number
+ *
+ * @n: number for which LPF is printed
+ *
+ * Return: Always void
  */
 
 void largest_prime_factor(unsigned long int n)
 {
-  int i = 3;
-  unsigned long int largest = 0;
+int i = 3;
+unsigned long int largest = 0;
 
-  while (n % 2 == 0)
-    n /= 2;
+while (n % 2 == 0)
+n /= 2;
 
-  while (i < sqrt(n))
-    {
-      while(n % i == 0)
-	n /= i, largest = i;
+while (i < sqrt(n))
+{
+while (n % i == 0)
+n /= i, largest = i;
 
-      i += 2;
-    }
+i += 2;
+}
 
-  if (n > 2)
-    largest = n;
+if (n > 2)
+largest = n;
 
-  printf("%lu\n", largest);
+printf("%lu\n", largest);
 }
