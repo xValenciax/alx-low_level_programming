@@ -16,6 +16,12 @@ while (*tmp != '\0')
 tmp++;
 
 tmp--;
+
+if(!(*tmp >= 'A' && *tmp <= 'Z' ) && !(*tmp >= 'a' && *tmp < 'z'))
+_putchar('\n');
+
+else
+{
 while (tmp != s)
 {
 _putchar(*tmp);
@@ -23,4 +29,5 @@ tmp--;
 }
 _putchar(*s);
 _putchar('\n');
+}
 }
