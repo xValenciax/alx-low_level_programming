@@ -15,6 +15,7 @@ char *tmp = s;
 while (*tmp != '\0')
 tmp++;
 
+tmp--;
 while (tmp != s)
 {
 _putchar(*tmp);
