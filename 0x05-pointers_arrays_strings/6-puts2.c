@@ -10,9 +10,10 @@
 
 void puts2(char *str)
 {
-int str_size = strlen(str), i;
-
-for (i = 0; i < str_size/2 + 1; i++)
+int str_size = strlen(str);
+if(str_size == 0)
+return;
+while (*str != '\0')
 {
 _putchar(*str);
  str += 2;
