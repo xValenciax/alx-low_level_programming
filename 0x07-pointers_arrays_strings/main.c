@@ -33,11 +33,12 @@ void simple_print_buffer(char *buffer, unsigned int size)
  */
 int main(void)
 {
-    char *s = "ZBCDEF";
-    char *f = "0A245BFC19ED";
-    unsigned int n;
+    char *s = "hello, world";
+    char *f = "abc";
+    char *t;
 
-    n = _strspn(s, f);
-    printf("%u\n", n);
+    t = _strpbrk(s, f);
+    if (t != NULL)
+      printf("%s\n", t);
     return (0);
 }
