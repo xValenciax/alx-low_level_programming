@@ -13,7 +13,7 @@
 void print_diagsums(int *a, int size)
 {
 int i = 0, j = 0, rows = 0;
-unsigned long int sum1 = 0, sum2 = 0;
+long int sum1 = 0, sum2 = 0;
 
 for (; i < (size * size); i++)
 {
