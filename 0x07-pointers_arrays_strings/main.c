@@ -34,11 +34,11 @@ void simple_print_buffer(char *buffer, unsigned int size)
 int main(void)
 {
     char *s = "hello, world";
-    char *f = "abc";
+    char *f = "wazoo";
     char *t;
 
-    t = _strpbrk(s, f);
-    if (t != NULL)
+    t = _strstr(s, f);
+    if(t != NULL)
       printf("%s\n", t);
     return (0);
 }
