@@ -15,7 +15,7 @@ void print_diagsums(int *a, int size)
 int i = 0, j = 0, rows = 0;
 long int sum1 = 0, sum2 = 0;
 
-for (; i < (size * size); i++)
+for (; rows < size; rows++)
 {
 for (; j < size; j++)
 {
@@ -24,9 +24,8 @@ sum1 += a[j + i];
 if (abs(size - (rows + 1) == j))
 sum2 += a[j + i];
 }
-i += size - 1;
-rows++;
+i += size;
 j = 0;
 }
-printf("%lu, %lu\n", sum1, sum2);
+printf("%ld, %ld\n", sum1, sum2);
 }
