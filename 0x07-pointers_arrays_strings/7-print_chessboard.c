@@ -20,6 +20,11 @@ while (j < 8)
 if ((a[i][j] >= 'a' && a[i][j] <= 'z')
 || (a[i][j] >= 'A' && a[i][j] <= 'Z'))
 _putchar(a[i][j]);
+
+else
+{
+_putchar(' ');
+}
 j++;
 }
 
