@@ -12,8 +12,8 @@
  */
 int binary_search(int s, int e, int num)
 {
-while (s <= e)
-{
+if (s > e)
+  return -1;
 int mid = (s + e) / 2;
 
 if ((mid * mid) == num)
@@ -24,9 +24,7 @@ return (binary_search(s, mid - 1, num));
 
 else
 return (binary_search(mid + 1, e, num));
-}
 
-return (-1);
 }
 
 /**
