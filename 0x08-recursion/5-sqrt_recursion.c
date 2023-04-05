@@ -13,16 +13,16 @@
 int binary_search(int s, int e, int num)
 {
 int mid;
- 
+
 if (s > e)
-  return -1;
+return (-1);
 
 mid = (s + e) / 2;
 
-if ((mid * mid) == num)
+if (mid *mid == num)
 return (mid);
 
-else if ((mid * mid) > num)
+else if ((mid *mid) > num)
 return (binary_search(s, mid - 1, num));
 
 else
