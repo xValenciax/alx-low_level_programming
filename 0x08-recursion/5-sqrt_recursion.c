@@ -12,9 +12,12 @@
  */
 int binary_search(int s, int e, int num)
 {
+int mid;
+ 
 if (s > e)
   return -1;
-int mid = (s + e) / 2;
+
+mid = (s + e) / 2;
 
 if ((mid * mid) == num)
 return (mid);
