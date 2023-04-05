@@ -31,10 +31,7 @@ return (check_palindrome(l + 1, r - 1, s));
 
 int is_palindrome(char *s)
 {
-int i = 0;
-
-while (*(s + i) != '\0')
-i++;
+int i = strlen(s);
 
 i--;
 
