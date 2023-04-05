@@ -10,9 +10,9 @@
  * Return: square root of num if found
  * -1 if not found
  */
-int binary_search(int s, int e, int num)
+int binary_search(unsigned long s, unsigned long e, unsigned long num)
 {
-int mid;
+unsigned long mid;
 
 if (s > e)
 return (-1);
@@ -39,5 +39,8 @@ return (binary_search(mid + 1, e, num));
  */
 int _sqrt_recursion(int n)
 {
-return (binary_search(1, n, n));
+if (n < 0)
+return (-1);
+
+return (binary_search(1, (unsigned int)n / 2, (unsigned int)n));
 }
