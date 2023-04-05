@@ -42,5 +42,8 @@ int _sqrt_recursion(int n)
 if (n < 0)
 return (-1);
 
-return (binary_search(1, (unsigned int)n / 2, (unsigned int)n));
+if (n == 1)
+return (1);
+
+return (binary_search(1, (unsigned long)n / 2, (unsigned long)n));
 }
