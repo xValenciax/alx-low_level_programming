@@ -14,10 +14,10 @@ int main(int argc, char *argv[])
 {
 int i = 1, res = 1;
 
-if (argc == 1)
+if (argc < 3)
 {
 printf("Error\n");
-exit(EXIT_FAILURE);
+return (1);
 }
 
 for (; i < argc; i++)
