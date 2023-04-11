@@ -14,29 +14,38 @@ char *str_concat(char *s1, char *s2)
 {
 char *concat;
 int s1Len = 0, s2Len = 0, i = 0, j = 0;
-while (*(s1 + s1Len) != '\0')
+int final_length = 0;
+
+if (s1 == NULL && s2 == NULL)
+return (NULL);
+
+while (s1 != NULL && *(s1 + s1Len) != '\0')
 s1Len++;
-while (*(s2 + s2Len) != '\0')
+while (s2 != NULL && *(s2 + s2Len) != '\0')
 s2Len++;
+
 if (s1 == NULL)
-{
-return (s2);
-}
+final_length = s2Len;
+
 else if (s2 == NULL)
-{
-return (s1);
-}
-concat = malloc(((s1Len + s2Len) *sizeof(*concat)) + 1);
+final_length = s1Len;
+
+else
+final_length = s1Len + s2Len;
+
+concat = malloc((final_length *sizeof(*concat)) + 1);
 
 if (concat == NULL)
 return (NULL);
-for (; i < (s1Len + s2Len); i++)
+
+for (; i < final_length; i++)
 {
 if (i < s1Len)
 concat[i] = *(s1 + i);
+
 else
 concat[i] = *(s2 + j), j++;
 }
-concat[s1Len + s2Len] = '\0';
+concat[final_length] = '\0';
 return (concat);
 }
