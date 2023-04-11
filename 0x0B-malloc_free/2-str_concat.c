@@ -20,17 +20,11 @@ while (*(s2 + s2Len) != '\0')
 s2Len++;
 if (s1 == NULL)
 {
-concat = malloc((s2Len *sizeof(*concat)) + 1);
-if (concat == NULL)
-return (NULL);
-return (concat);
+return (s2);
 }
 else if (s2 == NULL)
 {
-concat = malloc((s1Len *sizeof(*concat)) + 1);
-if (concat == NULL)
-return (NULL);
-return (concat);
+return (s1);
 }
 concat = malloc(((s1Len + s2Len) *sizeof(*concat)) + 1);
 
