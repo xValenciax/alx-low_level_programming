@@ -19,6 +19,8 @@ return (NULL);
 while (*(str + cnt) != '\0')
 cnt++;
 
+cnt--;
+
 dup = malloc(cnt *sizeof(*dup));
 
 if (dup == NULL)
