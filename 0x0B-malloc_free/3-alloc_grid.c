@@ -34,6 +34,8 @@ if (grid[i] == NULL)
 for (; j <= i; j++)
 free(grid[j]);
 
+free(grid);
+
 return (NULL);
 }
 }
