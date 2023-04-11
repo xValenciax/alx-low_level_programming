@@ -16,9 +16,6 @@ char *concat;
 int s1Len = 0, s2Len = 0, i = 0, j = 0;
 int final_length = 0;
 
-if (s1 == NULL && s2 == NULL)
-return (NULL);
-
 while (s1 != NULL && *(s1 + s1Len) != '\0')
 s1Len++;
 while (s2 != NULL && *(s2 + s2Len) != '\0')
