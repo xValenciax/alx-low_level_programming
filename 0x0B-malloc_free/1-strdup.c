@@ -19,7 +19,7 @@ return (NULL);
 while (*(str + cnt) != '\0')
 cnt++;
 
-dup = malloc(cnt *sizeof(*dup));
+dup = malloc(cnt *sizeof(*dup) + 1);
 
 if (dup == NULL)
 return (NULL);
