@@ -19,7 +19,7 @@ unsigned int i = 0, min = old_size < new_size ? old_size : new_size;
 if (old_size == new_size)
 return (ptr);
 
-if (new_size == 0 && ptr)
+if (new_size == 0 && tmp != NULL)
 {
 free(ptr);
 return (NULL);
@@ -29,6 +29,12 @@ new_ptr = malloc(new_size);
 
 if (new_ptr == NULL)
 return (NULL);
+
+if (tmp == NULL)
+{
+free(ptr);
+return (new_ptr);
+}
 
 for (; i < min; i++)
 new_ptr[i] = *(tmp + i);
