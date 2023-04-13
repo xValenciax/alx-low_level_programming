@@ -31,10 +31,7 @@ if (new_ptr == NULL)
 return (NULL);
 
 if (ptr == NULL)
-{
-/* free(ptr); */
 return (new_ptr);
-}
 
 for (; i < min; i++)
 *((char *)new_ptr + i) = *((char *)ptr + i);
