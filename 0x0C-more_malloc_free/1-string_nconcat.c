@@ -15,7 +15,7 @@ int i = 0;
 while (str != NULL && *(str + i) != '\0')
 i++;
 
-i = str == NULL ? i : i - 1;
+/* i = str == NULL ? i : i - 1; */
 
 return (i);
 }
