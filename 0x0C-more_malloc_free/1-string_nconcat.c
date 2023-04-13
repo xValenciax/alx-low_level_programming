@@ -32,8 +32,11 @@ return (i);
 
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-unsigned int maxLen = 0, i = 0, j = 0, len = calc_str_len(s1);
+unsigned int maxLen = 0, i = 0, j = 0, len = calc_str_len(s1),
+len2 = calc_str_len(s2);
 char *ptr;
+
+n = n >= len2 ? len2 : n;
 
 if (s1 == NULL)
 maxLen = n;
