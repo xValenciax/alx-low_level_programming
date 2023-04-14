@@ -21,7 +21,7 @@ len += strlen(av[i]);
 if (ac == 0 || av == NULL)
 return (NULL);
 
-res = malloc(len *sizeof(char));
+res = malloc(len *sizeof(char) + ac);
 
 if (res == NULL)
 return (NULL);
