@@ -11,19 +11,20 @@
 
 int _atoi(char *s)
 {
-int digit_fnd = 0, j = 1, is_sent = 0, is_neg = 0, temp = 0;
-unsigned int res = 0;
+int digit_fnd = 0, j = 1, is_sent = 0, is_neg = 0, temp = 0, res = 0;
 char *strt = s, *end = s;
 
-while (!digit_fnd)
+while (!digit_fnd && *strt != '\0')
 {
-if (((*strt >= 'a' && *strt <= 'z') || (*strt >= 'A' && *strt <= 'Z'))
-&& !is_sent)
+if ((*strt != '-' && *strt != ' ' && *strt != '\t'
+&& !(*strt >= '0' && *strt <= '9')) && !is_sent)
 is_sent = 1;
 if (*strt >= '0' && *strt <= '9')
 digit_fnd = 1;
 strt++;
 }
+if (!digit_fnd)
+return (0);
 strt--;
 end = strt;
 while ((*end >= '0' &&  *end <= '9'))
