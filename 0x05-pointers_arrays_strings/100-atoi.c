@@ -11,33 +11,35 @@
 
 int _atoi(char *s)
 {
-int digit_fnd = 0, j = 1, is_sent = 0, is_neg = 0, temp = 0, res = 0;
-char *strt = s, *end = s;
+int digit_fnd = 0, is_sent = 0, is_neg = 0, temp = 0, res = 0;
+unsigned int pow = 1;
+int i = 0, l, r;
 
-while (!digit_fnd && *strt != '\0')
+while (*(s + i) != '\0')
 {
-if ((*strt != '-' && *strt != ' ' && *strt != '\t'
-&& !(*strt >= '0' && *strt <= '9')) && !is_sent)
+if ((*(s + i) != '-' && *(s + i) != ' ' && *(s + i) != '\t'
+&& ((*(s + i) >= 'a' && *(s + i) <= 'z') ||
+(*(s + i) >= 'A' && *(s + i) <= 'Z')))
+&& !is_sent)
 is_sent = 1;
-if (*strt >= '0' && *strt <= '9')
-digit_fnd = 1;
-strt++;
+if (*(s + i) >= '0' && *(s + i) <= '9' && !digit_fnd)
+digit_fnd = 1, l = i;
+i++;
 }
 if (!digit_fnd)
 return (0);
-strt--;
-end = strt;
-while ((*end >= '0' &&  *end <= '9'))
-end++;
-end--;
-if (*(strt - 1) == '-')
+r = l;
+while ((*(s + r) >= '0' &&  *(s + r) <= '9'))
+r++;
+r--;
+if (*(s + l - 1) == '-')
 is_neg = 1;
-while (end != (strt - 1))
+while (r != (l - 1))
 {
-temp = *end - '0';
-res += (temp *j);
-j *= 10;
-end--;
+temp = *(s + r) - '0';
+res += (temp *pow);
+pow *= 10;
+r--;
 }
 if (is_neg && !is_sent)
 res *= -1;
