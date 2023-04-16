@@ -11,8 +11,8 @@
 
 int _atoi(char *s)
 {
-unsigned int digit_fnd = 0, is_sent = 0, is_neg = 0, temp = 0, res = 0;
-unsigned int pow = 1;
+int digit_fnd = 0, is_sent = 0, is_neg = 1, temp;
+unsigned int pow = 1, res = 0;
 int i = 0, l, r;
 
 while (*(s + i) != '\0')
@@ -21,7 +21,7 @@ if (((*(s + i) >= 'a' && *(s + i) <= 'z')
 || (*(s + i) >= 'A' && *(s + i) <= 'Z'))
 && !is_sent)
 is_sent = 1;
-if (*(s + i) == '-' && !is_neg)
+if (*(s + i) == '-' && is_neg == 1)
 is_neg = -1;
 if (*(s + i) >= '0' && *(s + i) <= '9' && !digit_fnd)
 digit_fnd = 1, l = i;
@@ -42,7 +42,5 @@ res += (temp *pow);
 pow *= 10;
 r--;
 }
-if (is_neg && !is_sent)
-res *= -1;
 return (res *is_neg);
 }
