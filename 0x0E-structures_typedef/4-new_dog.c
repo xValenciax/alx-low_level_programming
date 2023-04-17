@@ -1,26 +1,21 @@
 #include "dog.h"
 
 /**
- * _memcpy - copies memory bytes from one area to another
+ * _strlen - return the length of a string
  *
- * @dest: destination memory area
- * @src: source memory area
- * @n: number of bytes to be copied
+ * @s: string
  *
- * Return: pointer to dest area
+ * Return: the length of string s
  */
 
-char *_memcpy(char *dest, char *src, unsigned int n)
+int _strlen(char *s)
 {
-unsigned int cnt = 0;
+int len;
 
-while (cnt < n)
-{
-*(dest + cnt) = *(src + cnt);
-cnt++;
-}
+for (len = 0; *s != '\0'; len++)
+s++;
 
-return (dest);
+return (len);
 }
 
 /**
@@ -58,28 +53,34 @@ return (dest);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *created_dog;
-char *name_cpy, *owner_cpy;
 
 created_dog = malloc(sizeof(dog_t));
 
 if (!created_dog)
 return (NULL);
 
-name_cpy = malloc(sizeof(name));
-if (!name_cpy)
+created_dog->name = malloc(_strlen(name) + 1);
+if (!created_dog->name)
+{
+free(created_dog);
 return (NULL);
+}
 
-_strcpy(name_cpy, name);
-created_dog->name = name_cpy;
+_strcpy(created_dog->name, name);
+created_dog->name = created_dog->name;
 
 created_dog->age = age;
 
-owner_cpy = malloc(sizeof(owner));
-if (!owner_cpy)
+created_dog->owner = malloc(_strlen(owner) + 1);
+if (!created_dog->owner)
+{
+free(created_dog);
+free(created_dog->name);
 return (NULL);
+}
 
-_strcpy(owner_cpy, owner);
-created_dog->owner = owner_cpy;
+_strcpy(created_dog->owner, owner);
+created_dog->owner = created_dog->owner;
 
 return (created_dog);
 }
