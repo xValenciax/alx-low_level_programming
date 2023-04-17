@@ -68,7 +68,7 @@ created_dog->name = malloc(sizeof(name));
 if (!created_dog->name)
 return (NULL);
 
-_memcpy(created_dog->name, name, sizeof(name));
+_strcpy(created_dog->name, name);
 
 created_dog->age = age;
 
@@ -76,7 +76,7 @@ created_dog->owner = malloc(sizeof(owner));
 if (!created_dog->owner)
 return (NULL);
 
-_memcpy(created_dog->owner, owner, sizeof(owner));
+_strcpy(created_dog->owner, owner);
 
 return (created_dog);
 }
