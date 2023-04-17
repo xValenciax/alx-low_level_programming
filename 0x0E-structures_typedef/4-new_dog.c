@@ -59,7 +59,7 @@ created_dog = malloc(sizeof(dog_t));
 if (!created_dog)
 return (NULL);
 
-created_dog->name = malloc(_strlen(name) + 1);
+created_dog->name = malloc(sizeof(name));
 if (!created_dog->name)
 {
 free(created_dog);
@@ -71,7 +71,7 @@ created_dog->name = created_dog->name;
 
 created_dog->age = age;
 
-created_dog->owner = malloc(_strlen(owner) + 1);
+created_dog->owner = malloc(sizeof(owner));
 if (!created_dog->owner)
 {
 free(created_dog);
