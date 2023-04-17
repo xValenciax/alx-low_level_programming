@@ -58,25 +58,28 @@ return (dest);
 dog_t *new_dog(char *name, float age, char *owner)
 {
 dog_t *created_dog;
+char *name_cpy, *owner_cpy;
 
 created_dog = malloc(sizeof(dog_t));
 
 if (!created_dog)
 return (NULL);
 
-created_dog->name = malloc(sizeof(name));
-if (!created_dog->name)
+name_cpy = malloc(sizeof(name));
+if (!name_cpy)
 return (NULL);
 
-_strcpy(created_dog->name, name);
+_strcpy(name_cpy, name);
+created_dog->name = name_cpy;
 
 created_dog->age = age;
 
-created_dog->owner = malloc(sizeof(owner));
-if (!created_dog->owner)
+owner_cpy = malloc(sizeof(owner));
+if (!owner_cpy)
 return (NULL);
 
-_strcpy(created_dog->owner, owner);
+_strcpy(owner_cpy, owner);
+created_dog->owner = owner_cpy;
 
 return (created_dog);
 }
