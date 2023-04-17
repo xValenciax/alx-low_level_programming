@@ -1,5 +1,7 @@
 #include "dog.h"
 
+#define frmt(x) ((x == NULL) ? "(nil)" : (x))
+
 /**
  * print_dog - prints the content of a variable of type struct dog
  *
@@ -7,8 +9,6 @@
  *
  * Return: always void
  */
-
-#define frmt(x) ((x == NULL) ? "(nil)" : (x))
 
 void print_dog(struct dog *d)
 {
