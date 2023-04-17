@@ -28,11 +28,12 @@ void simple_print_buffer(char *buffer, unsigned int size)
 }
 int main(void)
 {
-    char *s0 = "Bob Dylan";
-    char *s1 = "Robert Allen";
+    char *s = "hello, world";
+    char *f = "aka";
+    char *t;
 
-    printf("%s, %s\n", s0, s1);
-    set_string(&s1, s0);
-    printf("%s, %s\n", s0, s1);
+    t = _strpbrk(s, f);
+    if(t != NULL)
+      printf("%s\n", t);
     return (0);
 }

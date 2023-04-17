@@ -25,5 +25,5 @@ i++;
 if (c == '\0')
 return (s + i);
 
-return ((char *)NULL);
+return ('\0');
 }

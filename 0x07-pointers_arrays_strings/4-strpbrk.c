@@ -5,7 +5,7 @@
  *
  * @s: input string
  * @accept: set of bytes used for searching
- *
+n *
  * Return: a pointer to the byte in s that matches one
  * of the bytes in accept
  * Or NULL if no matches
@@ -27,5 +27,5 @@ Pcnt++;
 
 Ocnt++;
 }
-return (NULL);
+return ('\0');
 }
