@@ -17,6 +17,9 @@ size_t i = 0;
 if (!array)
 return;
 
+if(!size)
+return;
+
 while (i < size)
 action(array[i]), i++;
 }
