@@ -17,7 +17,10 @@ size_t i = 0;
 if (!array)
 return;
 
-if(!size)
+if (!size)
+return;
+
+if (!action)
 return;
 
 while (i < size)
