@@ -18,12 +18,11 @@ char *op;
 if (argc != 4)
 printf("Error\n"), exit(98);
 
-if (argv[argc - 1][0] == '0' &&
-(argv[2][0] == '/' || argv[2][0] == '%'))
-printf("Error\n"), exit(100);
-
 num1 = atoi(argv[1]), num2 = atoi(argv[argc - 1]);
 op = argv[2];
+
+if (!num2 && (op[0] == '/' || op[0] == '%'))
+printf("Error\n"), exit(100);
 
 operation = get_op_func(op);
 
