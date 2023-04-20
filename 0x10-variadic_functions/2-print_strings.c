@@ -24,7 +24,9 @@ va_start(strings, n);
 
 while (i < n)
 {
-printf("%s", va_arg(strings, char *));
+char *str = va_arg(strings, char *);
+
+printf("%s", str ? str : "(nil)");
 
 if (separator && (i + 1) % n)
 printf("%s", separator);
