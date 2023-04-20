@@ -24,27 +24,30 @@ va_start(ap, format);
 while (format[i])
 {
 ignored = 0;
-switch(format[i])
+switch (format[i])
 {
 case 'c':
-ch = va_arg(ap, int);printf("%c", ch);break;
+ch = va_arg(ap, int), printf("%c", ch);
+break;
 case 'i':
-num = va_arg(ap, int);printf("%d", num);break;
+num = va_arg(ap, int), printf("%d", num);
+break;
 case 'f':
-fnum = va_arg(ap, double);printf("%f", fnum);break;
+fnum = va_arg(ap, double), printf("%f", fnum);
+break;
 case 's':
 str = va_arg(ap, char *);
-if (str)
+if (!str)
+str = "(nil)";
 printf("%s", str);
-else
-printf("(nil)");
 break;
 default:
-ignored = 1;break;
+ignored = 1;
+break;
 }
 if (!ignored && format[i + 1])
 printf(", ");
 i++;
 }
-va_end(ap);printf("\n");
+va_end(ap), printf("\n");
 }
