@@ -15,11 +15,6 @@ unsigned int i = 0, ignored = 0;
 char *str, ch;
 int num;
 float fnum;
-if (!format)
-{
-printf("\n");
-return;
-}
 va_start(ap, format);
 while (format[i])
 {
