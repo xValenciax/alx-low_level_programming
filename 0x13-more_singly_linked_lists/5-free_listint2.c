@@ -14,10 +14,10 @@ listint_t *curr = *head, *next;
 
 while (curr)
 {
-  next = curr->next;
+next = curr->next;
 
-  free(curr);
-  curr = next;
+free(curr);
+curr = next;
 }
 *head = NULL;
 }
