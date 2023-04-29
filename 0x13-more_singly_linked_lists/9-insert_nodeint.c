@@ -51,6 +51,7 @@ return (NULL);
 
 if (idx == 0)
 {
+free(new);
 return (add_nodeint(head, n));
 }
 
