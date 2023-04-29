@@ -70,10 +70,13 @@ len = listint_len(*head);
 if (idx > len)
 return (NULL);
 
-new = malloc(sizeof(listint_t));
-
 if (!idx)
 return (add_nodeint(head, n));
+
+new = malloc(sizeof(listint_t));
+
+if (!new)
+return (NULL);
 
 temp = *head;
 while (temp)
