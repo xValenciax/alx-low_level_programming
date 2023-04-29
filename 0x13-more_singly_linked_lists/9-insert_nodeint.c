@@ -51,10 +51,7 @@ return (NULL);
 
 if (idx == 0)
 {
-new->n = n;
-new->next = *head;
-*head = new;
-return (new);
+return (add_nodeint(head, n));
 }
 
 temp = *head;
