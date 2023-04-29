@@ -42,7 +42,7 @@ return (delete_nodeint_at_head(head));
 temp = *head;
 while (temp)
 {
-if (!temp || !temp->next)
+if (!temp->next)
 return (-1);
 
 if (i == index - 1)
