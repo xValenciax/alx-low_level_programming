@@ -44,16 +44,13 @@ unsigned int it = 0;
 if (!head)
 return (NULL);
 
+if (idx == 0)
+return (add_nodeint(head, n));
+
 new = malloc(sizeof(listint_t));
 
 if (!new)
 return (NULL);
-
-if (idx == 0)
-{
-free(new);
-return (add_nodeint(head, n));
-}
 
 temp = *head;
 while (temp && it < idx)
