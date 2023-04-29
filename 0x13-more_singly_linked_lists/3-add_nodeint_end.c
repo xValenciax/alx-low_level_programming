@@ -21,10 +21,7 @@ return (NULL);
 temp->n = n;
 temp->next = NULL;
 if (!(*head))
-{
-*head = malloc(sizeof(listint_t));
 *head = temp;
-}
 
 else
 {
