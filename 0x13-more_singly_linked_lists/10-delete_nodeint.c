@@ -66,11 +66,9 @@ if (index > len)
 return (-1);
 
 temp = *head;
+
 while (i < index - 1)
-{
-temp = temp->next;
-i++;
-}
+temp = temp->next, i++;
 
 delNode = temp->next;
 temp->next = delNode->next;
