@@ -9,17 +9,14 @@
  */
 int delete_nodeint_at_head(listint_t **head)
 {
-listint_t *temp, *prevNode;
+listint_t *temp;
 
 if (!head || !(*head))
 return (-1);
 
 temp = *head;
-prevNode = (*head)->next;
-*head = prevNode;
-
+*head = (*head)->next;
 free(temp);
-
 return (1);
 }
 
@@ -45,6 +42,9 @@ return (delete_nodeint_at_head(head));
 temp = *head;
 while (temp)
 {
+if (!temp || !temp->next)
+return (-1);
+
 if (i == index - 1)
 prevNode = temp;
 
