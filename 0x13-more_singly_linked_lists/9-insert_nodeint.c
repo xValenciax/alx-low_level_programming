@@ -63,9 +63,7 @@ temp->next = new;
 return (new);
 }
 
-else
 temp = temp->next;
-
 it++;
 }
 
