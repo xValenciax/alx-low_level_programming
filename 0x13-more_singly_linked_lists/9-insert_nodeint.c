@@ -55,9 +55,6 @@ return (NULL);
 temp = *head;
 while (temp && it < idx)
 {
-temp = temp->next;
-it++;
-
 if (it == idx - 1)
 {
 new->n = n;
@@ -65,6 +62,11 @@ new->next = temp->next;
 temp->next = new;
 return (new);
 }
+
+else
+temp = temp->next;
+
+it++;
 }
 
 return (NULL);
