@@ -12,7 +12,7 @@ void print_binary_rec(unsigned long int n)
 if (!n)
 return;
 
-print_binary_rec(n >> 2);
+print_binary_rec(n >> 1);
 _putchar((n & 1) + '0');
 }
 
