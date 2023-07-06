@@ -12,10 +12,9 @@
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
-unsigned int no_bits = 0;
-int i = 0;
+unsigned int no_bits = 0, i = 0;
 
-for (; i < 32; i++)
+for (; i < sizeof(n) * 8; i++)
 {
 if (GET_BIT(n, i) != GET_BIT(m, i))
 no_bits++;
