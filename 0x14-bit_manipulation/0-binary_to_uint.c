@@ -21,7 +21,6 @@ if (b[i] != '0' && b[i] != '1')
 return (0);
 
 result = result * 2 + (b[i] - '0');
-printf("result = %d\n", result);
 }
 return (result);
 }
