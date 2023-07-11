@@ -20,7 +20,7 @@ return (0);
 
 fd = open(filename, O_RDONLY);
 
-if (!fd)
+if (fd == -1)
 return (0);
 
 bytes = read(fd, &buff[0], letters);
