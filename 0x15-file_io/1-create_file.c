@@ -18,29 +18,38 @@ s++;
 return (len);
 }
 
+/**
+ * create_file - creates a new file with given text
+ *
+ * @filename: name of the file to be created
+ * @text_content: content of the file
+ *
+ * Return: 1 (Success), -1 (Failure)
+ */
+
 int create_file(const char *filename, char *text_content)
 {
-  int fd;
-  ssize_t bytes;
+int fd;
+ssize_t bytes;
 
-  if (!filename)
-    return (-1);
+if (!filename)
+return (-1);
 
-  if (!text_content)
-    {
-      fd = creat(filename, S_IRUSR | S_IWUSR);
-      if (fd == -1)
-	return (-1);
-      return (1);
-    }
+if (!text_content)
+{
+fd = creat(filename, S_IRUSR | S_IWUSR);
+if (fd == -1)
+return (-1);
+return (1);
+}
 
-  fd = open(filename, O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
-  if (fd == -1)
-    return (-1);
+fd = open(filename, O_WRONLY | O_TRUNC | O_CREAT, S_IRUSR | S_IWUSR);
+if (fd == -1)
+return (-1);
 
-  bytes = write(fd, text_content, _strlen(text_content));
-  if (bytes == -1)
-    return (-1);
+bytes = write(fd, text_content, _strlen(text_content));
+if (bytes == -1)
+return (-1);
 
-  return (1);
+return (1);
 }
