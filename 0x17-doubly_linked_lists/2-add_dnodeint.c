@@ -19,8 +19,19 @@ if (!new)
 return (NULL);
 
 new->n = n;
+if (!(*head))
+{
+(*head) = new;
+(*head)->prev = NULL;
+(*head)->next = NULL;
+}
+
+else
+{
+(*head)->prev = new;
 new->prev = NULL;
-new->next = *head;
-*head = new;
+new->next = (*head);
+(*head) = new;
+}
 return (*head);
 }
