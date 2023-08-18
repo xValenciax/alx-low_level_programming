@@ -40,6 +40,14 @@ unsigned int i = 0;
 if (idx > len)
 return (NULL);
 
+if (!(*h) || idx == 0)
+new = add_dnodeint(h, n);
+
+else if (idx == len)
+new = add_dnodeint_end(h, n);
+
+else
+{
 new = malloc(sizeof(dlistint_t));
 
 new->n = n;
@@ -54,5 +62,6 @@ curr->prev->next = new;
 new->next = curr;
 new->prev = curr->prev;
 curr->prev = new;
+}
 return (new);
 }
