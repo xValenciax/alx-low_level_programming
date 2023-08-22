@@ -42,7 +42,6 @@ return (-1);
 curr = *head, len = dlistint_len(curr);
 if (len == 0 || index >= len)
 return (-1);
-
 if (index == 0 || index == len - 1)
 {
 if (curr->next)
@@ -55,7 +54,6 @@ else
 (*head) = NULL;
 free(curr);
 }
-
 else
 {
 while (curr && i < index)
@@ -63,6 +61,8 @@ while (curr && i < index)
 curr = curr->next;
 i++;
 }
+if (!curr || !curr->next)
+return (-1);
 curr->prev->next = curr->next;
 curr->next->prev = curr->prev;
 curr->next = NULL;
