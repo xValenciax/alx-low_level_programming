@@ -39,7 +39,7 @@ size_t len;
 if (!head || !(*head))
 return (-1);
 
-curr = *head;len = dlistint_len(curr);
+curr = *head, len = dlistint_len(curr);
 if (len == 0 || index >= len)
 return (-1);
 
