@@ -32,14 +32,14 @@ return (len);
 
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-dlistint_t *curr = *head;
+dlistint_t *curr;
 unsigned int i = 0;
 size_t len;
 
-if (!(*head))
+if (!head || !(*head))
 return (-1);
 
-len = dlistint_len(curr);
+curr = *head;len = dlistint_len(curr);
 if (len == 0 || index >= len)
 return (-1);
 
