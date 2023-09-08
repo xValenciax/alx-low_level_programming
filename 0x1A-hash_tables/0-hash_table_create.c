@@ -8,7 +8,7 @@ if (!h_table)
 return NULL;
 
 h_table->size = size;
-h_table->array = calloc(size, sizeof(hash_node_t *));
+h_table->array = malloc(size * sizeof(hash_node_t *));
 if (!h_table->array)
 return NULL;
 
