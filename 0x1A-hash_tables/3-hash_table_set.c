@@ -29,7 +29,7 @@ curr->value = strdup(value);
 return (1);
 }
 
-node = malloc(sizeof(hash_node_t *));
+node = malloc(sizeof(hash_node_t));
 if (!node)
 return (0);
 

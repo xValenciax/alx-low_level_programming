@@ -26,10 +26,10 @@ free(node->value);
 while (curr)
 {
 tmp = curr;
+curr = curr->next;
 free(tmp->key);
 free(tmp->value);
 free(tmp);
-curr = curr->next;
 }
 free(node);
 }
