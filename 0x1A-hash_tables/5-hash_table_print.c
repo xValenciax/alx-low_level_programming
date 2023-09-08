@@ -22,7 +22,7 @@ for (; i < ht->size; i++)
 curr = ht->array[i];
 while (curr)
 {
-printf("%s '%s': '%s'", comma, curr->key, curr->value);
+printf("%s'%s': '%s'", comma, curr->key, curr->value);
 comma = ", ";
 curr = curr->next;
 }
