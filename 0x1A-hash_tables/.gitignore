@@ -1,3 +1,4 @@
 *~
 *.o
+main.c
 update.sh
