@@ -1,4 +1,4 @@
-#ifndef HASH__H
+#ifndef HASH_H
 #define HASH_H
 
 #include <stdio.h>
