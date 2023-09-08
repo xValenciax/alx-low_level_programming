@@ -19,11 +19,14 @@ return (NULL);
 index = key_index((unsigned char *)key, ht->size);
 
 curr = ht->array[index];
-while (curr)
-{
-if (!strcmp(curr->key, key))
+if (curr && !strcmp(curr->key, key))
 return (curr->value);
+
+while (curr && strcmp(curr->key, key))
 curr = curr->next;
-}
+
+if (!curr)
 return (NULL);
+
+return (curr->value);
 }
