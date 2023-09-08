@@ -19,9 +19,6 @@ return (NULL);
 index = key_index((unsigned char *)key, ht->size);
 
 curr = ht->array[index];
-if (curr && strcmp(curr->key, key))
-return (curr->value);
-
 while (curr)
 {
 if (!strcmp(curr->key, key))
