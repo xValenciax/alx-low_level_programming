@@ -25,7 +25,7 @@ return (curr->value);
 while (curr && strcmp(curr->key, key))
 curr = curr->next;
 
-if (!curr)
+if (!curr || strcmp(curr->key, key))
 return (NULL);
 
 return (curr->value);
