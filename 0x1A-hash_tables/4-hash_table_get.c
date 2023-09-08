@@ -22,11 +22,11 @@ curr = ht->array[index];
 if (curr && strcmp(curr->key, key))
 return (curr->value);
 
-while (curr && strcmp(curr->key, key))
-curr = curr->next;
-
-if (!curr || strcmp(curr->key, key))
-return (NULL);
-
+while (curr)
+{
+if (!strcmp(curr->key, key))
 return (curr->value);
+curr = curr->next;
+}
+return (NULL);
 }
