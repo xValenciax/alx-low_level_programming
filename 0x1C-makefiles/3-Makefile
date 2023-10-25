@@ -1,5 +1,5 @@
 CC=gcc
-SRC=${wildcard *.c}
+SRC=main.c school.c
 OBJ=${SRC:.c=.o}
 NAME=school
 RM=rm
@@ -18,6 +18,4 @@ oclean:
 fclean:
 	$(RM) -f $(NAME) *.o *~
 
-re:
-	$(RM) -f *.o
-	$(MAKE) all
+re: oclean all
